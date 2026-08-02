@@ -28,7 +28,27 @@
           "must-have",
           "template-crm"
         ]
-      }
+      },
+      {
+        "group": "Ghid de comunicare",
+        "pages": [
+          "index",
+          "site-de-comunicare",
+          "comunicare-chat",
+          "comunicare-call-center",
+          "comunicare-patient-care",
+          "gestionare-comentarii-social-media"
+        ]
+      },
+      {
+        "group": "Resurse",
+        "pages": [
+          "descriere-produse-si-servicii",
+          "must-have",
+          "template-crm"
+        ]
+      },
+      "untitled-page"
     ],
     "global": {
       "anchors": [
@@ -46,14 +66,14 @@
     }
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/images/Mitachi-logo.svg",
+    "dark": "/images/logo-dark.svg"
   },
   "navbar": {
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:alexandru@mitachi.md"
       }
     ],
     "primary": {
@@ -73,12 +93,5 @@
       "cursor",
       "vscode"
     ]
-  },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
-    }
   }
 }
