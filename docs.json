@@ -66,8 +66,8 @@
     }
   },
   "logo": {
-    "light": "/images/Mitachi-logo.svg",
-    "dark": "/images/logo-dark.svg"
+    "light": "/images/logo-dark.svg",
+    "dark": "/images/Mitachi-logo.svg"
   },
   "navbar": {
     "links": [
@@ -93,5 +93,8 @@
       "cursor",
       "vscode"
     ]
+  },
+  "metadata": {
+    "timestamp": true
   }
 }
