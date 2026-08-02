@@ -4,7 +4,7 @@ description: "Pipeline-ul de comunicare, de la primul contact până la pacient 
 ---
 
 <Steps>
-  <Step title="Etapa Contact">
+  <Step title="Etapa Contact" icon="handshake">
     Aceasta este prima etapă din cele pe care le parcurge o persoană de la primul contact până la a deveni pacient.
 
     Scopul etapei este să stabilim un bun raport inițial cu persoana și să obținem o programare sau cel puțin datele de contact: nume și prenume, număr de telefon.
@@ -43,7 +43,7 @@ description: "Pipeline-ul de comunicare, de la primul contact până la pacient 
       </Accordion>
     </AccordionGroup>
   </Step>
-  <Step title="Etapa Call Center">
+  <Step title="Etapa Call Center" icon="phone">
     Această etapă presupune că am obținut datele de contact (nume/prenume și număr de telefon).
 
     Prin acest apel telefonic vom încerca să obținem programarea în clinica la consultație a persoanei.
@@ -80,10 +80,19 @@ description: "Pipeline-ul de comunicare, de la primul contact până la pacient 
       </Accordion>
     </AccordionGroup>
   </Step>
-  <Step title="Etapa Consultație">
+  <Step title="Etapa Consultație" icon="stethoscope">
     În aceasta etapă, medicul efectuează consultația și elaborează un plan de tratament pentru potențialul pacient.
 
     PATIENT CARE-ul urmărește recomandarile si planul de tratament elaborat și se concentrează pe partea de argumentare a alegerii tratamentului potrivit, a etapelor efectuării, a prețului și a condițiilor de plată.
+
+    <Note>
+      **NOTA BENE** — ÎN ACEASTĂ ETAPĂ ESTE OBLIGATORIE INTRODUCEREA UNUI PRET ACHITAT, ASTFEL INTRODUCEM ÎN CÂMPUL SALE:
+
+      - introducem pretul CBCT-ului sau a consultației de specialitate la plata acesteia,
+      - introducem pretul plătit când avem un pacient la prima vizită din cadrul unui plan de tratament.
+
+      INTRODUCEM ÎN CÂMPUL "VALOARE INTEGRALĂ PLAN DE TRATAMENT", valoare integral\[ a planului de tratament.
+    </Note>
 
     <AccordionGroup>
       <Accordion title="ACȚIUNI">
@@ -108,15 +117,6 @@ description: "Pipeline-ul de comunicare, de la primul contact până la pacient 
         **\*** 👉\*\*[COMUNICARE](/comunicare-chat#consultație-a2-apel-secundar-pentru-stimularea-trecerii-in-consultație-de-specialitate)\*\*
       </Accordion>
 
-      <Accordion title="NOTA BENE">
-        ÎN ACEASTĂ ETAPĂ ESTE OBLIGATORIE INTRODUCEREA UNUI PRET ACHITAT, ASTFEL INTRODUCEM ÎN CÂMPUL SALE:
-
-        - introducem pretul CBCT-ului sau a consultației de specialitate la plata acesteia,
-        - introducem pretul plătit când avem un pacient la prima vizită din cadrul unui plan de tratament.
-
-        INTRODUCEM ÎN CÂMPUL "VALOARE INTEGRALĂ PLAN DE TRATAMENT", valoare integral\[ a planului de tratament.
-      </Accordion>
-
       <Accordion title="EXITURI">
         Aceasta etapă, CONSULTAȚIE, trebuie concluzionată în maxim 15 zile de la mutarea contactului în acest stagiu.
 
@@ -133,8 +133,18 @@ description: "Pipeline-ul de comunicare, de la primul contact până la pacient 
       </Accordion>
     </AccordionGroup>
   </Step>
-  <Step title="Etapa Pacient în tratament">
+  <Step title="Etapa Pacient în tratament" icon="tooth">
     În această etapă pacientul începe planul de tratament.
+
+    <Note>
+      **NOTA BENE** — ÎN ACEASTĂ ETAPĂ ESTE OBLIGATORIE INTRODUCEREA UNEI VALORI “SALE” si VALOAREA PLAN TRATAMENT, ASTFEL:
+
+      - introducem valoarea Achitata sau a consultației de specialitate la plata acesteia,
+      - introducem valoarea serviciului de care a beneficiat în timpul acestei consultații,
+      - introducem valoarea plătită ca avans la planul de tratament atunci când avem un pacient la prima vizită din cadrul unui plan de tratament.
+
+      VALOARE PLAN DE TRATAMENT - INTRODUCEM VALOAREA TOTALĂ A PLANULUI DE TRATAMENT
+    </Note>
 
     <AccordionGroup>
       <Accordion title="ACȚIUNI">
@@ -145,16 +155,6 @@ description: "Pipeline-ul de comunicare, de la primul contact până la pacient 
         \*👉\*\*[COMUNICARE](/comunicare-chat#pacient-în-tratament-a1+a2)\*\*
 
         <u>Găsiți aici modalitatea de descriere a planului de tratament, lista de obiecții și modul de a le gestiona:</u>\*👉\*\*[COMUNICARE](/comunicare-patient-care)\*\*
-      </Accordion>
-
-      <Accordion title="NOTA BENE">
-        ÎN ACEASTĂ ETAPĂ ESTE OBLIGATORIE INTRODUCEREA UNEI VALORI “SALE” si VALOAREA PLAN TRATAMENT, ASTFEL:
-
-        - introducem valoarea Achitata sau a consultației de specialitate la plata acesteia,
-        - introducem valoarea serviciului de care a beneficiat în timpul acestei consultații,
-        - introducem valoarea plătită ca avans la planul de tratament atunci când avem un pacient la prima vizită din cadrul unui plan de tratament.
-
-        VALOARE PLAN DE TRATAMENT - INTRODUCEM VALOAREA TOTALĂ A PLANULUI DE TRATAMENT
       </Accordion>
 
       <Accordion title="EXITURI">
@@ -178,24 +178,20 @@ description: "Pipeline-ul de comunicare, de la primul contact până la pacient 
       </Accordion>
     </AccordionGroup>
   </Step>
-  <Step title="Etapa Pacient +">
+  <Step title="Etapa Pacient +" icon="circle-check">
     În etapa PACIENT, considerată finalul pozitiv acestui PIPELINE, ajung toate persoanele care au fost prezente la consultație și acceptă un tratament în clinică, plătindu-l total sau parțial.
 
     În acest caz, punem contactul în etapa PACIENT și selectăm serviciul efectuat \+ pretul achitat.
 
-    <AccordionGroup>
-      <Accordion title="NOTA BENE">
-        **NOTA BENE**
+    <Note>
+      **NOTA BENE** — ÎN ACEASTĂ ETAPĂ ESTE OBLIGATORIE INTRODUCEREA UNEI VALORI “SALE” si VALAORE PLAN TRATAMENT, ASTFEL:
 
-        ÎN ACEASTĂ ETAPĂ ESTE OBLIGATORIE INTRODUCEREA UNEI VALORI “SALE” si VALAORE PLAN TRATAMENT, ASTFEL:
+      - introducem SUMA formată din valorile plătite efectiv de pacient în clinică în câmpul SALE. Acest câmp se actualizează adăugând mereu valorile încasate pe toată perioada tratamentului.
 
-        - introducem SUMA formată din valorile plătite efectiv de pacient în clinică în câmpul SALE. Acest câmp se actualizează adăugând mereu valorile încasate pe toată perioada tratamentului.
-
-        introducem VALOAREA TOTALĂ A PLANULUI DE TRATAMENT în câmpul VALOARE INTEGRALĂ PLAN DE TRATAMENT.
-      </Accordion>
-    </AccordionGroup>
+      introducem VALOAREA TOTALĂ A PLANULUI DE TRATAMENT în câmpul VALOARE INTEGRALĂ PLAN DE TRATAMENT.
+    </Note>
   </Step>
-  <Step title=" Etapa Lost ">
+  <Step title=" Etapa Lost " icon="circle-xmark">
     În cazul în care pacientul s-a prezentat dar nu acceptă tratamentul îl trecem în statusul ABSENT TRATAMENT, devenind un LOST.
 
     <AccordionGroup>
