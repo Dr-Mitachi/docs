@@ -42,6 +42,12 @@
           "must-have",
           "template-crm"
         ]
+      },
+      {
+        "group": "Model (draft)",
+        "pages": [
+          "model-etapa-contact"
+        ]
       }
     ]
   },
