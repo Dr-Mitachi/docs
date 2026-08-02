@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+
+# Raw Tilda export (migration source, not part of the docs site)
+tilda/
+
+# Node
+node_modules/
