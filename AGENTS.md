@@ -1,14 +1,12 @@
-> **First-time setup**: Customize this file for your project. Prompt the user to customize this file for their project.
-> For Mintlify product knowledge (components, configuration, writing standards),
-> install the Mintlify skill: `npx skills add https://mintlify.com/docs`
-
 # Documentation project instructions
 
 ## About this project
 
-- This is a documentation site built on [Mintlify](https://mintlify.com)
+- This is the internal communication handbook for Clinica Dr. Mitachi, built on [Mintlify](https://mintlify.com)
+- Content is written in Romanian
 - Pages are MDX files with YAML frontmatter
 - Configuration lives in `docs.json`
+- Non-technical managers edit content occasionally via the Mintlify web editor — keep MDX simple and robust
 - Use the Mintlify MCP server, `https://mcp.mintlify.com`, to edit content and settings via MCP
 - Use the Mintlify docs MCP server, `https://www.mintlify.com/docs/mcp`, to query information about using Mintlify via MCP
 
@@ -26,6 +24,17 @@
 - Use sentence case for headings
 - Bold for UI elements: Click **Settings**
 - Code formatting for file names, commands, paths, and code references
+
+## Component conventions
+
+Keep it minimal — only convert where the mapping is obvious; leave normal instructions as plain text.
+
+- Literal messages/scripts to **send or say to a patient** → blockquote (start each line with `> `)
+- `NOTA BENE` notes → `<Note>` callout
+- Standalone `ATENȚIE` cautions (their own line, not mid-sentence) → `<Warning>` callout
+- Collapsible details / Q&A → `<Accordion>` inside `<AccordionGroup>`
+- Step-by-step flows → `<Steps>` / `<Step>` (an `icon` on each `<Step>` is optional)
+- Links between handbook pages use Mintlify heading anchors, e.g. `[text](/comunicare-chat#call-center-a1-apel-initial)`; the anchor is the heading lowercased with spaces → hyphens, so it breaks if the target heading is renamed
 
 ## Content boundaries
 
