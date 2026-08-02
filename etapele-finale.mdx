@@ -1,0 +1,119 @@
+---
+title: "Etapele finale — Pacient și Lost"
+description: "Cum se închide pipeline-ul: Pacient în tratament, Pacient + și Lost — logica statusurilor din CRM."
+---
+
+<Note>
+  **Pagină în lucru.** Structura și conținutul sunt gata de folosit. Zonele marcate cu „_de completat de manager_" (KPI, greșeli frecvente, persoana de contact) așteaptă informația voastră internă. Textul scripturilor, cuvânt cu cuvânt, este în paginile din grupul **Scripturi (referință)**.
+</Note>
+
+Aceasta este partea finală a pipeline-ului. După [Consultație](/site-de-comunicare), lead-ul devine pacient și parcurge tratamentul până la unul dintre cele două finaluri: **pozitiv (Pacient +)** sau **negativ (Lost)**. Spre deosebire de etapele de la început, aici nu mai există scripturi lungi — munca principală este **actualizarea corectă a statusului și a valorilor în CRM**. Pentru câmpurile **SALE** și **VALOARE INTEGRALĂ PLAN DE TRATAMENT** vezi [Template CRM](/template-crm) și [Glosar](/glosar).
+
+## Pacient în tratament
+
+**Scop:** pacientul începe planul de tratament și îl parcurge, vizită cu vizită, până la finalizare. Rolul tău este să menții pacientul în tratament (reprogramări la neprezentare) și să ții **valorile la zi în CRM**.
+
+<Tip>
+  **De ce contează:** valoarea reală a unui pacient se construiește pe toată durata tratamentului. Dacă nu actualizezi câmpul **SALE** la fiecare vizită, rapoartele de încasări nu reflectă realitatea și pacienții care „se pierd" pe parcurs nu sunt urmăriți la timp.
+</Tip>
+
+**Când:** din momentul în care pacientul începe planul, pe toată durata acestuia. Etapa se concluzionează în termenul prevăzut în planul de tratament.
+
+<Note>
+  **NOTA BENE — CRM:** în această etapă este obligatorie introducerea unei valori **SALE** și a **VALORII PLAN DE TRATAMENT**:
+
+  - în câmpul **SALE** introducem valoarea achitată (consultație de specialitate, serviciul de care a beneficiat la vizită, sau avansul la planul de tratament la prima vizită);
+  - **SALE** se **actualizează la fiecare vizită** pe care pacientul o face în clinică;
+  - în câmpul **VALOARE INTEGRALĂ PLAN DE TRATAMENT** introducem valoarea totală a planului.
+</Note>
+
+**Reprogramare la neprezentare (A1 + A2):** dacă pacientul nu se prezintă la o vizită, contactează-l în maxim 10 minute, telefonic și prin WhatsApp, pentru a reprograma. Scriptul complet este în [Comunicare chat](/comunicare-chat). Reprogramarea se încearcă în maxim 7 zile de la data programării inițiale.
+
+### Exituri (statusul în CRM)
+
+<AccordionGroup>
+  <Accordion title="POZITIV — TRATAMENT ÎN CURS" icon="circle-check">
+    Contactul rămâne în acest status pe toată durata tratamentului, cu câte un task pentru fiecare vizită prevăzută. **Actualizează valoarea SALE la fiecare vizită.**
+  </Accordion>
+  <Accordion title="POZITIV — TRATAMENT ÎNTRERUPT TEMPORAR" icon="circle-pause">
+    Faci acțiunile **A1 + A2** pentru a readuce pacientul la **TRATAMENT ÎN CURS**.
+  </Accordion>
+  <Accordion title="POZITIV — TRATAMENT ABANDONAT" icon="circle-minus">
+    Pui acest status și muți contactul în **Pacient +**, după ce ai făcut acțiunile A1 + A2.
+  </Accordion>
+  <Accordion title="POZITIV — TRATAMENT FINALIZAT" icon="circle-check">
+    Pui acest status și muți contactul în **Pacient +** la finalizarea tratamentului.
+  </Accordion>
+  <Accordion title="NEGATIV — TRATAMENT NEÎNCEPUT" icon="circle-xmark">
+    Contactul se închide **după acțiunea A2** și ajunge în etapa **Lost**. Atenție: fă toate acțiunile înainte de a concluziona negativ.
+  </Accordion>
+</AccordionGroup>
+
+## Pacient +
+
+**Scop:** este **finalul pozitiv** al pipeline-ului. Aici ajung toate persoanele care au fost prezente la consultație și acceptă un tratament în clinică, plătindu-l total sau parțial. Pui contactul în etapa **Pacient +** și selectezi serviciul efectuat + prețul achitat.
+
+**Când:** la finalizarea sau abandonarea tratamentului (venind din **Pacient în tratament**), sau ori de câte ori un pacient a acceptat și a plătit un tratament.
+
+<Note>
+  **NOTA BENE — CRM:** în această etapă este obligatorie introducerea valorilor **SALE** și **VALOARE PLAN DE TRATAMENT**:
+
+  - în câmpul **SALE** introducem **SUMA plătită efectiv** de pacient în clinică. Acest câmp se **actualizează mereu**, adăugând valorile încasate pe toată perioada tratamentului;
+  - în câmpul **VALOARE INTEGRALĂ PLAN DE TRATAMENT** introducem **valoarea totală** a planului de tratament.
+
+  Vezi definițiile câmpurilor în [Template CRM](/template-crm) și [Glosar](/glosar).
+</Note>
+
+## Lost
+
+**Scop:** este **finalul negativ** al pipeline-ului. Aici ajung contactele care nu au putut fi convertite în pacienți sau care au abandonat înainte de a începe tratamentul. Exemplu tipic: pacientul s-a prezentat, dar nu acceptă tratamentul → status **ABSENT TRATAMENT** → devine **Lost**.
+
+**Când:** ori de câte ori un exit negativ dintr-o etapă anterioară închide lead-ul (vezi [Site de comunicare](/site-de-comunicare) pentru exiturile fiecărei etape).
+
+### Motive Lost (statusul în CRM)
+
+Alege motivul care descrie exact situația în care s-a închis contactul:
+
+- **NU FURNIZEAZĂ DATE CONTACT / CONTACT INTERN / CONTACT GREȘIT / RECRUTARE**
+- **REFUZĂ PROGRAMARE / NU RĂSPUNDE 2X + 3 MESAJE**
+- **NU RĂSPUNDE 2X + 1 MESAJ**
+- **ABSENT**
+- **REFUZĂ PROPUNERI CONSULT**
+- **REFUZĂ TRATAMENT**
+- **TRATAMENT NEÎNCEPUT**
+- **ABSENT TRATAMENT**
+- **PLAN REFUZAT**
+
+## Greșeli frecvente — ce să NU faci
+
+<Warning>
+  - ❌ Nu uita să **actualizezi SALE la fiecare vizită** — nu doar la prima plată.
+  - ❌ Nu confunda câmpurile: **SALE** = suma plătită efectiv; **VALOARE INTEGRALĂ PLAN DE TRATAMENT** = valoarea totală a planului.
+  - ❌ Nu concluziona **TRATAMENT NEÎNCEPUT** fără să fi făcut acțiunile A1 + A2 de reprogramare.
+  - ❌ Nu închide un contact în **Lost** fără să selectezi **motivul corect** din listă.
+  - ❌ Nu muta pacientul în **Pacient +** fără să fi completat valorile obligatorii în CRM.
+
+  _De completat de manager:_ adăugați aici greșelile reale observate cel mai des la echipă.
+</Warning>
+
+## Nu ești sigur? Cere ajutor
+
+<Info>
+  _De completat de manager:_ cui și pe ce canal se adresează angajatul când o situație nu este acoperită aici (ex: „Întreabă Patient Care Manager-ul pe grupul intern").
+</Info>
+
+<Info>
+  _De completat de manager:_ indicatorul de performanță pentru aceste etape (ex: „% pacienți care finalizează tratamentul" sau valoarea SALE medie per pacient).
+</Info>
+
+## Termeni folosiți în această pagină
+
+| Termen | Ce înseamnă |
+| --- | --- |
+| **SALE** | Suma plătită efectiv de pacient în clinică; se actualizează la fiecare încasare (vezi [Glosar](/glosar) și [Template CRM](/template-crm)) |
+| **VALOARE INTEGRALĂ PLAN DE TRATAMENT** | Valoarea totală a planului de tratament, introdusă în CRM |
+| **A1 + A2** | Acțiunile de reprogramare (telefon + WhatsApp) la neprezentarea pacientului |
+| **Pacient +** | Exitul pozitiv: pacientul a acceptat și a plătit tratamentul |
+| **Lost** | Exitul negativ: contactul închis, cu unul dintre motivele din listă |
+| **Exit** | Statusul cu care se închide etapa (pozitiv sau negativ) |
+| **CRM** | Sistemul în care înregistrăm contactele, statusurile și valorile (vezi [Template CRM](/template-crm)) |

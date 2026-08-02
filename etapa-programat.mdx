@@ -1,0 +1,122 @@
+---
+title: "Etapa Programat"
+description: "Verifici dacă pacientul se prezintă la consultație și reprogramezi absențele în fereastra de 7 zile."
+---
+
+<Note>
+  **Pagină în lucru.** Structura și conținutul sunt gata de folosit. Zonele marcate cu „_de completat de manager_" (KPI, greșeli frecvente, persoana de contact) așteaptă informația voastră internă. Textul scripturilor, cuvânt cu cuvânt, este în paginile din grupul **Scripturi (referință)**.
+</Note>
+
+## Scopul etapei
+
+Persoana are deja o **programare** la consultație. Obiectivul acestei etape este să verifici dacă pacientul **se prezintă** la data și ora stabilite. Dacă vine → îl predai colegului de Patient Care și treci la Consultație. Dacă **nu vine** → îl recontactezi rapid și îl **reprogramezi** în fereastra de maximum 7 zile.
+
+<Tip>
+  **De ce contează:** o programare nu înseamnă un pacient. Mulți oameni lipsesc la prima vizită, iar cu cât reacționăm mai repede la o absență, cu atât mai mari sunt șansele să-l readucem. De aceea, la o neprezentare, sunăm în **maximum 15 minute** — cât timp momentul programării este încă proaspăt în mintea persoanei.
+</Tip>
+
+## Când folosești această etapă
+
+- **Declanșator:** contactul a acceptat o programare (a ajuns din Call Center) și sosește data consultației.
+- **Termen:** reprogramarea se încearcă în **maximum 7 zile** de la data primei programări. Doar în mod excepțional reprogramările pot fi ulterioare.
+
+| Ce se întâmplă la data programării | Ce faci |
+| --- | --- |
+| Pacientul **se prezintă** în clinică (PREZENTAT) | Patient Care îl preia de la recepție → treci la [Consultație](/site-de-comunicare) |
+| Pacientul **nu se prezintă** (NEPREZENTAT) | Responsabil Call Center sună în max 15 min (A1), apoi A2, apoi A3 — vezi [Comunicare chat](/comunicare-chat) |
+
+## Cum arată succesul
+
+<CardGroup cols={2}>
+  <Card title="Rezultat ideal" icon="user-check">
+    Pacientul **s-a prezentat** la consultație → Patient Care îl preia → lead-ul trece la **Consultație**.
+  </Card>
+  <Card title="Rezultat de recuperare" icon="calendar-plus">
+    Pacientul a lipsit, dar l-ai **reprogramat** în cele 7 zile → rămâne activ în pipeline.
+  </Card>
+</CardGroup>
+
+<Info>
+  _De completat de manager:_ indicatorul de performanță pentru această etapă (ex: „% din programări care se prezintă" sau „% din absențe reprogramate în 7 zile").
+</Info>
+
+## Scriptul — ce spui
+
+Scenariile complete, cuvânt cu cuvânt, sunt în [Comunicare chat](/comunicare-chat) și [Comunicare Call Center](/comunicare-call-center). Pe scurt:
+
+<Steps>
+  <Step title="Pacient PREZENTAT — preluarea la recepție">
+    Când pacientul ajunge, Patient Care îl preia din zona de așteptare cu comunicarea dedicată. Vezi [Comunicare patient care](/comunicare-patient-care).
+  </Step>
+  <Step title="A1 — apel de reprogramare imediat">
+    La o neprezentare, Responsabil Call Center sună în max 15 minute și întreabă dacă întârzie sau dorește reprogramare. Vezi [Comunicare chat](/comunicare-chat).
+  </Step>
+  <Step title="A2 — mesaj de reprogramare">
+    Dacă nu răspunde la apel, trimiți un mesaj de reprogramare și reamintești oferta de 200 MDL. Vezi [Comunicare chat](/comunicare-chat).
+  </Step>
+  <Step title="A3 — reminder ofertă">
+    După 72 de ore fără răspuns, trimiți mesajul-reminder cu avantajele clinicii și oferta scadentă. Vezi [Comunicare chat](/comunicare-chat).
+  </Step>
+</Steps>
+
+<Info>
+  Se așteaptă ~72 de ore între A2 și A3. Exemplu de mesaj de deschidere la apelul A1:
+</Info>
+
+> Bună ziua, domnule/doamnă ……………, sunt …………… de la Clinica dr. Mitachi. Așa cum am stabilit de comun acord acum ……… zile, astăzi, la ora ………, era programată consultația dumneavoastră. Ajungeți cu întârziere sau doriți să reprogramăm consultația pentru un alt moment?
+
+## Dacă persoana spune… (puncte de decizie)
+
+| Persoana spune / face | Ce faci |
+| --- | --- |
+| „Ajung, întârzii puțin" | Confirmi și anunți recepția / Patient Care că pacientul e pe drum |
+| „Vreau să reprogramez" | Stabilești o nouă dată în **maxim 7 zile** de la prima programare |
+| Nu răspunde la apelul A1 | Treci la **A2 mesaj reprogramare** prin canalul folosit până acum |
+| Nu răspunde nici la A2 | După **72h** treci la **A3 reminder** cu oferta scadentă |
+| Cere prețul / are o obiecție | Vezi răspunsurile din [Comunicare Call Center](/comunicare-call-center) |
+
+## Exituri (statusul în CRM)
+
+<AccordionGroup>
+  <Accordion title="POZITIV — PREZENT" icon="circle-check">
+    Pacientul s-a prezentat la consultație. Patient Care îl preia de la recepție, iar lead-ul trece la etapa **Consultație**.
+  </Accordion>
+  <Accordion title="INTERMEDIAR — REPROGRAMAT" icon="calendar-plus">
+    Pacientul a lipsit, dar a acceptat o nouă dată. Rămâne în **Programat** cu noua programare, în fereastra de maximum 7 zile.
+  </Accordion>
+  <Accordion title="INTERMEDIAR — NEPREZENTAT" icon="clock">
+    Pacientul nu a venit și încă nu l-am recontactat cu succes. Parcurgem acțiunile A1 → A2 → A3 pentru a-l readuce.
+  </Accordion>
+  <Accordion title="NEGATIV — ABSENT" icon="circle-xmark">
+    Pacientul nu s-a prezentat și nu a putut fi reprogramat după parcurgerea tuturor acțiunilor. Lead-ul se închide ca **LOST**, cu motivul **ABSENT**.
+  </Accordion>
+</AccordionGroup>
+
+## Greșeli frecvente — ce să NU faci
+
+<Warning>
+  - ❌ Nu aștepta ore întregi după o absență — sună în **maximum 15 minute** de la momentul programării.
+  - ❌ Nu începe cu un mesaj scris — la o neprezentare **încerci întâi apelul telefonic**, nu WhatsApp.
+  - ❌ Nu propune date de reprogramare în afara ferestrei de **7 zile** (decât excepțional).
+  - ❌ Nu sări peste pași — parcurge A1 → A2 → A3 înainte de a concluziona **ABSENT**.
+  - ❌ Nu uita să notezi **statusul corect în CRM** (PREZENT / REPROGRAMAT / NEPREZENTAT / ABSENT).
+
+  _De completat de manager:_ adăugați aici greșelile reale observate cel mai des la echipă.
+</Warning>
+
+## Nu ești sigur? Cere ajutor
+
+<Info>
+  _De completat de manager:_ cui și pe ce canal se adresează angajatul când o situație nu este acoperită aici (ex: „Întreabă responsabilul de Call Center pe grupul intern").
+</Info>
+
+## Termeni folosiți în această pagină
+
+| Termen | Ce înseamnă |
+| --- | --- |
+| **Programat** | Etapa în care contactul are o programare și verificăm prezența la consultație |
+| **PREZENTAT / NEPREZENTAT** | Dacă pacientul a venit sau nu la data programării |
+| **REPROGRAMAT** | Pacientul a lipsit, dar a acceptat o nouă dată în fereastra de 7 zile |
+| **A1–A3** | Acțiunile succesive de recontactare la o neprezentare |
+| **Patient Care** | Colegul care preia pacientul prezentat și conduce consultația (vezi [Comunicare patient care](/comunicare-patient-care)) |
+| **CRM** | Sistemul în care înregistrăm contactele și statusurile (vezi [Template CRM](/template-crm)) |

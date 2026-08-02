@@ -28,11 +28,22 @@
         "group": "Ghid de comunicare",
         "pages": [
           "index",
+          "start-aici",
           "site-de-comunicare",
+          "etapa-contact",
+          "etapa-call-center",
+          "etapa-programat",
+          "etapa-consultatie",
+          "etapele-finale",
+          "gestionare-comentarii-social-media"
+        ]
+      },
+      {
+        "group": "Scripturi (referință)",
+        "pages": [
           "comunicare-chat",
           "comunicare-call-center",
-          "comunicare-patient-care",
-          "gestionare-comentarii-social-media"
+          "comunicare-patient-care"
         ]
       },
       {
@@ -42,12 +53,6 @@
           "must-have",
           "template-crm",
           "glosar"
-        ]
-      },
-      {
-        "group": "Model (draft)",
-        "pages": [
-          "model-etapa-contact"
         ]
       }
     ]
