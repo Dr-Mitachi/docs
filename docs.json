@@ -9,53 +9,12 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "pages": [
-      {
-        "group": "Ghid de comunicare",
-        "pages": [
-          "index",
-          "site-de-comunicare",
-          "comunicare-chat",
-          "comunicare-call-center",
-          "comunicare-patient-care",
-          "gestionare-comentarii-social-media"
-        ]
-      },
-      {
-        "group": "Resurse",
-        "pages": [
-          "descriere-produse-si-servicii",
-          "must-have",
-          "template-crm"
-        ]
-      },
-      {
-        "group": "Ghid de comunicare",
-        "pages": [
-          "index",
-          "site-de-comunicare",
-          "comunicare-chat",
-          "comunicare-call-center",
-          "comunicare-patient-care",
-          "gestionare-comentarii-social-media"
-        ]
-      },
-      {
-        "group": "Resurse",
-        "pages": [
-          "descriere-produse-si-servicii",
-          "must-have",
-          "template-crm"
-        ]
-      },
-      "untitled-page"
-    ],
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "mitachi.md",
+          "icon": "globe",
+          "href": "https://mitachi.md"
         },
         {
           "anchor": "Blog",
@@ -63,7 +22,47 @@
           "icon": "newspaper"
         }
       ]
-    }
+    },
+    "groups": [
+      {
+        "group": "Ghid de comunicare",
+        "pages": [
+          "index",
+          "site-de-comunicare",
+          "comunicare-chat",
+          "comunicare-call-center",
+          "comunicare-patient-care",
+          "gestionare-comentarii-social-media"
+        ]
+      },
+      {
+        "group": "Resurse",
+        "pages": [
+          "descriere-produse-si-servicii",
+          "must-have",
+          "template-crm"
+        ]
+      },
+      {
+        "group": "Ghid de comunicare",
+        "pages": [
+          "index",
+          "site-de-comunicare",
+          "comunicare-chat",
+          "comunicare-call-center",
+          "comunicare-patient-care",
+          "gestionare-comentarii-social-media"
+        ]
+      },
+      {
+        "group": "Resurse",
+        "pages": [
+          "descriere-produse-si-servicii",
+          "must-have",
+          "template-crm"
+        ]
+      }
+    ]
   },
   "logo": {
     "light": "/images/logo-dark.svg",
