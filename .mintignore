@@ -5,3 +5,6 @@
 # Draft content
 drafts/
 *.draft.mdx
+
+# Raw Tilda export (source only, not part of the docs site)
+tilda/

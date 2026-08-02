@@ -11,10 +11,22 @@
   "navigation": {
     "pages": [
       {
-        "group": "Getting Started",
+        "group": "Ghid de comunicare",
         "pages": [
           "index",
-          "quickstart"
+          "site-de-comunicare",
+          "comunicare-chat",
+          "comunicare-call-center",
+          "comunicare-patient-care",
+          "gestionare-comentarii-social-media"
+        ]
+      },
+      {
+        "group": "Resurse",
+        "pages": [
+          "descriere-produse-si-servicii",
+          "must-have",
+          "template-crm"
         ]
       }
     ],
