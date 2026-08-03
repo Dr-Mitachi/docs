@@ -2,13 +2,25 @@
 
 ## About this project
 
-- This is the internal communication handbook for Clinica Dr. Mitachi, built on [Mintlify](https://mintlify.com)
+- This is the internal **knowledge base** for Clinica Dr. Mitachi, built on [Mintlify](https://mintlify.com)
 - Content is written in Romanian
 - Pages are MDX files with YAML frontmatter
 - Configuration lives in `docs.json`
 - Non-technical managers edit content occasionally via the Mintlify web editor — keep MDX simple and robust
 - Use the Mintlify MCP server, `https://mcp.mintlify.com`, to edit content and settings via MCP
 - Use the Mintlify docs MCP server, `https://www.mintlify.com/docs/mcp`, to query information about using Mintlify via MCP
+
+## Structure (multi-domain)
+
+- The KB is organized by **domain**. Each domain is a top-level **Tab** (`docs.json` → `navigation.tabs`) whose pages live in a **folder** of the same name.
+  - `comunicare/` — "Comunicare cu clienții" (the first and most complete domain)
+  - `receptie/`, `sisteme/` — scaffolded future domains (placeholder landing pages)
+- `index.mdx` (root) is the KB landing that routes into the tabs. Shared/global pages (landing) stay at root.
+- **Each domain follows the same internal shape:** Start aici → concepte/overview → proceduri/how-to → referință → resurse. Reuse this when building a new domain.
+- **To add a domain:** create a `<domain>/` folder, add its pages, add a new tab in `navigation.tabs`. Don't reshuffle existing domains.
+- **When moving/renaming a page,** add a `redirects` entry (`docs.json` → `redirects`) from the old path so bookmarks/links don't break.
+- Internal links use absolute paths including the folder, e.g. `[Etapa Contact](/comunicare/etapa-contact)`; anchors use Mintlify heading slugs.
+- Pages marked "Pagină în lucru" contain `de completat de manager` placeholders (KPIs, common mistakes, escalation, CRM screenshots) awaiting internal input.
 
 ## Terminology
 
