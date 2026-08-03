@@ -23,38 +23,65 @@
         }
       ]
     },
-    "groups": [
+    "tabs": [
       {
-        "group": "Ghid de comunicare",
-        "pages": [
-          "index",
-          "start-aici",
-          "site-de-comunicare",
-          "etapa-contact",
-          "etapa-call-center",
-          "etapa-programat",
-          "etapa-consultatie",
-          "etapele-finale",
-          "exemplu-complet",
-          "gestionare-comentarii-social-media"
+        "tab": "Comunicare cu clienții",
+        "groups": [
+          {
+            "group": "Ghid de comunicare",
+            "pages": [
+              "comunicare/prezentare",
+              "comunicare/start-aici",
+              "comunicare/site-de-comunicare",
+              "comunicare/etapa-contact",
+              "comunicare/etapa-call-center",
+              "comunicare/etapa-programat",
+              "comunicare/etapa-consultatie",
+              "comunicare/etapele-finale",
+              "comunicare/exemplu-complet",
+              "comunicare/gestionare-comentarii-social-media"
+            ]
+          },
+          {
+            "group": "Scripturi (referință)",
+            "pages": [
+              "comunicare/comunicare-chat",
+              "comunicare/comunicare-call-center",
+              "comunicare/comunicare-patient-care"
+            ]
+          },
+          {
+            "group": "Resurse",
+            "pages": [
+              "comunicare/descriere-produse-si-servicii",
+              "comunicare/must-have",
+              "comunicare/template-crm",
+              "comunicare/cum-folosesti-crm",
+              "comunicare/glosar"
+            ]
+          }
         ]
       },
       {
-        "group": "Scripturi (referință)",
-        "pages": [
-          "comunicare-chat",
-          "comunicare-call-center",
-          "comunicare-patient-care"
+        "tab": "Recepție & administrativ",
+        "groups": [
+          {
+            "group": "Recepție & administrativ",
+            "pages": [
+              "receptie/prezentare"
+            ]
+          }
         ]
       },
       {
-        "group": "Resurse",
-        "pages": [
-          "descriere-produse-si-servicii",
-          "must-have",
-          "template-crm",
-          "cum-folosesti-crm",
-          "glosar"
+        "tab": "Sisteme & instrumente",
+        "groups": [
+          {
+            "group": "Sisteme & instrumente",
+            "pages": [
+              "sisteme/prezentare"
+            ]
+          }
         ]
       }
     ]
@@ -90,5 +117,75 @@
   },
   "metadata": {
     "timestamp": true
-  }
+  },
+  "redirects": [
+    {
+      "source": "/comunicare-call-center",
+      "destination": "/comunicare/comunicare-call-center"
+    },
+    {
+      "source": "/comunicare-chat",
+      "destination": "/comunicare/comunicare-chat"
+    },
+    {
+      "source": "/comunicare-patient-care",
+      "destination": "/comunicare/comunicare-patient-care"
+    },
+    {
+      "source": "/cum-folosesti-crm",
+      "destination": "/comunicare/cum-folosesti-crm"
+    },
+    {
+      "source": "/descriere-produse-si-servicii",
+      "destination": "/comunicare/descriere-produse-si-servicii"
+    },
+    {
+      "source": "/etapa-call-center",
+      "destination": "/comunicare/etapa-call-center"
+    },
+    {
+      "source": "/etapa-consultatie",
+      "destination": "/comunicare/etapa-consultatie"
+    },
+    {
+      "source": "/etapa-contact",
+      "destination": "/comunicare/etapa-contact"
+    },
+    {
+      "source": "/etapa-programat",
+      "destination": "/comunicare/etapa-programat"
+    },
+    {
+      "source": "/etapele-finale",
+      "destination": "/comunicare/etapele-finale"
+    },
+    {
+      "source": "/exemplu-complet",
+      "destination": "/comunicare/exemplu-complet"
+    },
+    {
+      "source": "/gestionare-comentarii-social-media",
+      "destination": "/comunicare/gestionare-comentarii-social-media"
+    },
+    {
+      "source": "/glosar",
+      "destination": "/comunicare/glosar"
+    },
+    {
+      "source": "/must-have",
+      "destination": "/comunicare/must-have"
+    },
+    {
+      "source": "/site-de-comunicare",
+      "destination": "/comunicare/site-de-comunicare"
+    },
+    {
+      "source": "/start-aici",
+      "destination": "/comunicare/start-aici"
+    },
+    {
+      "source": "/template-crm",
+      "destination": "/comunicare/template-crm"
+    }
+  ]
 }
